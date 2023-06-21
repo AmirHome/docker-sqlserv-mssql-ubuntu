@@ -48,7 +48,7 @@ To run this project, you will need to add the following environment variables to
   docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' db-mssql
 
   ### Run command on container
-  docker exec -it db-mssql bash -c "/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Root@123' -Q 'CREATE DATABASE DbTest;'"
+  docker exec -it db-mssql bash -c "/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Root@123' -Q 'CREATE DATABASE TestDB;'"
 
   ### Show databases
   docker exec -it db-mssql bash -c "/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Root@123' -Q 'SELECT name FROM master.dbo.sysdatabases;'"
